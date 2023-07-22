@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var levelSelectPopUpButton: UIButton!
     
     let numbersByDigit = [
         "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
@@ -219,16 +220,18 @@ class ViewController: UIViewController {
     var correctAnsver = ""
     var score = 0
     var switchNumber = 0
+    var questionLevel = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setLevelSelectPopUpButton()
         askQuestion()
     }
     
     func askQuestion(){
     //    var switchNumber = Int.random(in: 0..<3)
-        var questionNumber = Int.random(in: 0..<1000)
+        var questionNumber = Int.random(in: 0..<questionLevel)
         var questionArray = [String]()
         var answerArray = [String]()
         
@@ -266,6 +269,30 @@ class ViewController: UIViewController {
             switchNumber = 1
             askQuestion()
         }
+    }
+    
+    func setLevelSelectPopUpButton(){
+        let optionClosure = {(action: UIAction) in print(action.title)
+            self.score = self.score - 1 //askQuestion score u artırır soru çözülmeden artmasını engelemek için
+            if action.title == "0 to 10"{
+                self.questionLevel = 10
+            }else if action.title == "0 to 100"{
+                self.questionLevel = 100
+            }else if action.title == "0 to 1000"{
+                self.questionLevel = 1000
+            }
+            self.askQuestion()
+        }
+        
+        levelSelectPopUpButton.menu = UIMenu(children:[
+            UIAction(title: "0 to 10", state: .on, handler: optionClosure),
+            UIAction(title: "0 to 100", state: .on, handler: optionClosure),
+            UIAction(title: "0 to 1000", state: .on, handler: optionClosure),
+            //UIAction(title: "0 to 10000", state: .on, handler: optionClosure)
+        ])
+        
+        levelSelectPopUpButton.showsMenuAsPrimaryAction = true
+        levelSelectPopUpButton.changesSelectionAsPrimaryAction = true
     }
     
     func trueAnswer(){

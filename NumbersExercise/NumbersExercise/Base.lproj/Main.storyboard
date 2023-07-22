@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,6 +68,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuO-Vx-nqL">
+                                <rect key="frame" x="16" y="270" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" title="0 to ..." id="7nt-O9-jv4">
+                                    <children>
+                                        <command title="10" id="xcg-Rv-cC5"/>
+                                        <command title="100" id="1Bd-om-dqm"/>
+                                        <command title="1000" id="bsh-Us-WVI"/>
+                                        <command title="10000" id="4Il-ed-vkG"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,6 +88,7 @@
                     <connections>
                         <outlet property="acceptButton" destination="SWd-DR-peX" id="0he-KP-mGv"/>
                         <outlet property="answerTextField" destination="jPO-ij-OzF" id="i6T-4O-t3N"/>
+                        <outlet property="levelSelectPopUpButton" destination="OuO-Vx-nqL" id="l4v-mJ-eem"/>
                         <outlet property="questionLabel" destination="QXK-TD-ViV" id="16U-aH-D6r"/>
                         <outlet property="scoreLabel" destination="T1b-DS-kac" id="9g4-lb-pcI"/>
                     </connections>
