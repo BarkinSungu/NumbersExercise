@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3EE97C2A6BF0CC00D9B4A0 /* NumberLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3EE97B2A6BF0CC00D9B4A0 /* NumberLists.swift */; };
 		DAB278C12A67EC710092D6F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB278C02A67EC710092D6F8 /* AppDelegate.swift */; };
 		DAB278C32A67EC710092D6F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB278C22A67EC710092D6F8 /* SceneDelegate.swift */; };
 		DAB278C52A67EC710092D6F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB278C42A67EC710092D6F8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3EE97B2A6BF0CC00D9B4A0 /* NumberLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLists.swift; sourceTree = "<group>"; };
 		DAB278BD2A67EC710092D6F8 /* NumbersExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumbersExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB278C02A67EC710092D6F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB278C22A67EC710092D6F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				DAB278C92A67EC720092D6F8 /* Assets.xcassets */,
 				DAB278CB2A67EC720092D6F8 /* LaunchScreen.storyboard */,
 				DAB278CE2A67EC720092D6F8 /* Info.plist */,
+				DA3EE97B2A6BF0CC00D9B4A0 /* NumberLists.swift */,
 			);
 			path = NumbersExercise;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3EE97C2A6BF0CC00D9B4A0 /* NumberLists.swift in Sources */,
 				DAB278C52A67EC710092D6F8 /* ViewController.swift in Sources */,
 				DAB278C12A67EC710092D6F8 /* AppDelegate.swift in Sources */,
 				DAB278C32A67EC710092D6F8 /* SceneDelegate.swift in Sources */,
